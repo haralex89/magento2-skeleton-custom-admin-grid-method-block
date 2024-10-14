@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!--
+        parent: It is indicated that it will be injected into the native marketing section.
+        Example: parent="Magento_Backend::marketing" attach menu to main menu "marketing"
+        -->
+        <add
+            id="MagentoLatam_CustomMenuAdminhtml::principal_menu"
+            title="Menu Principal"
+            module="MagentoLatam_CustomMenuAdminhtml"
+            sortOrder="50"
+            resource="MagentoLatam_CustomMenuAdminhtml::principal_menu"
+        />
+        <!--
+        action: es la ruta que ejecutara para mostrar la pagina.
+        llantas viene del atributo frontName del archivo routes de Adminhtml
+        -->
+        <add
+            id="MagentoLatam_CustomMenuAdminhtml::sub_menu"
+            title="SubMenu"
+            module="MagentoLatam_CustomMenuAdminhtml"
+            sortOrder="51"
+            parent="MagentoLatam_CustomMenuAdminhtml::principal_menu"
+            action="magentolatam_custommenuadminhtml/index/index/"
+            resource="MagentoLatam_CustomMenuAdminhtml::index"
+        />
+    </menu>
+</config>

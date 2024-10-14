@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <!--
+        frontName="llantas" -> identificador de url en el front para acceder.
+        -->
+        <route id="magentolatam_custommenuadminhtml" frontName="magentolatam_custommenuadminhtml">
+            <!--
+            name: En esta parte se declara el modulo sobre el que estara asociado la ruta
+            -->
+            <module name="MagentoLatam_CustomMenuAdminhtml" before="Magento_Backend" />
+        </route>
+    </router>
+</config>
